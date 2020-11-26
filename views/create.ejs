@@ -7,19 +7,32 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <%- include("./partials/nav.ejs") %>
-    <div>
-        <h1>Create a post:</h1>
-    </div>
-    
-    <div>
-        <form action="/create" method="post">
-            <input type="text" name="title" required>
-            <textarea name="text" cols="30" rows="10"></textarea>
-            <input type="submit" value="Create">
-        </form>
+
+    <nav>
+        <div id="site-title">
+            <a href="/">
+                <h1>Gamecard</h1>
+            </a>
+        </div>
+        <div id="path">
+            <a href="/">Explore</a>
+            <a href="/about">About</a>
+            <a class="current" href="/create">Create</a>
+        </div>
+    </nav>
+
+    <div class="flexform">
+        <div class="form">
+            <h1>Create a post:</h1>
+            <form action="/create" method="post">
+                <label for="title">Title:</label>
+                <input type="text" name="title" required>
+                <label for="text">Content:</label>
+                <textarea name="text" cols="30" rows="10"></textarea>
+                <input type="submit" value="Create">
+            </form>
+        </div>
     </div>
 
-    <%- include("./partials/footer.ejs") %>
 </body>
 </html>

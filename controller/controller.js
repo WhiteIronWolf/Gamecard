@@ -8,7 +8,7 @@ const find_post = (req, res) => {
         } else {
             res.render('index', {
                 posts: posts,
-                title: 'home'
+                title: 'Explore'
             });
         }
     }).sort({

@@ -7,16 +7,41 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <%- include("./partials/nav.ejs") %>
+
+    <nav>
+        <div id="site-title">
+            <a href="/">
+                <h1>Gamecard</h1>
+            </a>
+        </div>
+        <div id="path">
+            <a class="current" href="/">Explore</a>
+            <a href="/about">About</a>
+            <a href="/create">Create</a>
+        </div>
+    </nav>
+
     <div>
         <h1>Explore:</h1>
     </div>
+
+    <div class="sidenav">
+        <h3>Games</h3>
+        <a href="#about">Latest releases</a>
+        <a href="#about">Highest rated</a>
+        <a href="#about">Coming soon</a>
+        <h3>Game creators</h3>
+        <a href="#services">Most popular</a>
+        <a href="#services">New to the industry</a>
+        <h3>Leaderboard</h3>
+        <a href="#contact">Highest karma</a>
+      </div>
     
     <% for (let i = 0; i < posts.length; i++) { %> 
-    <div>
+    <div class="posts">
+        <p id="time"><%= posts[i].createdAt %> </p>
         <h2><%= posts[i].title %></h2>
         <p><%= posts[i].text %></p>
-        <p id="time"><%= posts[i].createdAt %> </p>
     </div>
     <% } %>
 

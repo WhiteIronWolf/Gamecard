@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/WhiteIronWolf/Gamecard#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "chalk": "^4.1.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.15"
+    "mongoose": "^5.10.15",
+    "mongoose-encryption": "^2.0.3"
   }
 }

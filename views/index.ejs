@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %> </title>
-    <link rel="stylesheet" href="css/style.css">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
+    <%- include("./partials/nav.ejs") %>
+    <div id="flex">
 
-    <nav>
-        <div id="site-title">
-            <a href="/">
-                <h1>Gamecard</h1>
-            </a>
+
+        <div class="box-1">
+            <h1>Welcome</h1>
+            <p>Welcome to Gamecard! A social network made for gamers alike. Communicate with other gamers around the
+                world or explore our immense library of video games and learn how you can easily organize your favorite
+                games.</p>
+            <div class="flex">
+                <form action="/sign_in" method="get">
+                    <input type="submit" value="Sign in">
+                </form>
+                <a href="/sign_up">Sign up</a>
+            </div>
         </div>
-        <div id="path">
-            <a class="current" href="/">Explore</a>
-            <a href="/about">About</a>
-            <a href="/create">Create</a>
+        <div class="box-2">
+            <h1>Explore and save</h1>
+            <p>Explore the immense library of video games where you can add and save games to your personal gamecard profile.</p>
+            <div class="flex">
+                <p>Playing</p>
+                <p>Played</p>
+                <p id="want">Want</p>
+            </div>
+            <div class="flex">
+                <img src="img/posters/Control.jpg" alt="" width="180" height="270">
+                <img src="img/posters/Celeste.jpg" alt="" width="180" height="270">
+            </div>
         </div>
-    </nav>
-
-    <div>
-        <h1>Explore:</h1>
     </div>
-
-    <div class="sidenav">
-        <h3>Games</h3>
-        <a href="#about">Latest releases</a>
-        <a href="#about">Highest rated</a>
-        <a href="#about">Coming soon</a>
-        <h3>Game creators</h3>
-        <a href="#services">Most popular</a>
-        <a href="#services">New to the industry</a>
-        <h3>Leaderboard</h3>
-        <a href="#contact">Highest karma</a>
-      </div>
-    
-    <% for (let i = 0; i < posts.length; i++) { %> 
-    <div class="posts">
-        <p id="time"><%= posts[i].createdAt %> </p>
-        <h2><%= posts[i].title %></h2>
-        <p><%= posts[i].text %></p>
-    </div>
-    <% } %>
-
-    <%- include("./partials/footer.ejs") %>
 </body>
+
 </html>

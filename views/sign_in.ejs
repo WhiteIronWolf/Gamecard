@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> </title>
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+
+    <nav>
+        <div id="site-title">
+            <a href="/">
+                <h1>Gamecard</h1>
+            </a>
+        </div>
+        <div id="path">
+            <a href="/sign_up">Don’t have an account</a>
+        </div>
+    </nav>
+
+    <div class="flexform">
+        <div class="form">
+            <h1>Sign in:</h1>
+            <form action="/sign_in" method="post">
+                <label for="email">E-mail:</label>
+                <input type="email" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="pwd" name="password">
+                <input type="submit" value="Sign in">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

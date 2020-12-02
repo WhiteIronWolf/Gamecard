@@ -1,0 +1,52 @@
+@import url("master.css");
+
+body {
+    background: linear-gradient(to left, black 0%,black 50%,#000000 50%,#151515 50%,#151515 100%);
+}
+
+h1 {
+    margin: 25px 0px 25px 0px;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+#flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex p {
+    margin: 25px 25px 25px 0px;
+}
+
+#want {
+    color: #FF00CE;
+}
+
+.flex img {
+    margin-right: 50px;
+    border-radius: 15px;
+}
+
+.box-1 {
+    width: 500px;
+    margin-right: 50px;
+}
+
+.box-1 a {
+    margin-left: 50px;
+}
+
+.box-2 {
+    width: 500px;
+    margin-left: 50px;
+}

@@ -1,12 +1,11 @@
-const express = require('express');
-const Post = require('../models/posts');
+const Post = require('../../models/posts');
 
-const find_post = (req, res) => {
+function find_post(req, res) {
     Post.find((err, posts) => {
         if (err) {
             console.log(err);
         } else {
-            res.render('index', {
+            res.render('explore', {
                 posts: posts,
                 title: 'Explore'
             });
@@ -16,6 +15,7 @@ const find_post = (req, res) => {
     })
 }
 
+/*
 const create_post = (req, res) => {
     res.render('create', {
         title: 'Create'
@@ -28,13 +28,10 @@ const new_post = (req, res) => {
         text: req.body.text,
     });
     post.save();
-    res.redirect('/')
+    res.redirect('/explore')
 }
+*/
 
-const router = express.Router();
-
-router.get('/', find_post);
-router.get('/create', create_post);
-router.post('/create', new_post);
-
-module.exports = router;
+module.exports = {
+    find_post
+}

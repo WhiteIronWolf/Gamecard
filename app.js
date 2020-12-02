@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const controller = require('./controller/controller');
-
+const routes = require('./routes/routes');
+const chalk = require('chalk');
 
 // express app
 const app = express();
@@ -19,13 +19,13 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-// routes
+// about
 app.get('/about', (req, res) => {
   res.render('about', { title: 'About' });
 });
 
-// post routes
-app.use('/', controller);
+// routes
+app.use('/', routes);
 
 // 404 page
 app.use((req, res) => {
@@ -33,5 +33,5 @@ app.use((req, res) => {
 });
 
 app.listen(3000, (err) => {
-  console.log('Server is running at port 3000');
+  console.log(chalk.green('Server is running at port 3000'));
 })

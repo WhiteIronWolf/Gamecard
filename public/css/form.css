@@ -1,0 +1,5 @@
+@import url("master.css");
+
+nav {
+    justify-content: space-between;
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %> </title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explore.css">
 </head>
 
 <body>
@@ -42,22 +42,45 @@
         <div id="create">
             <img src="/img/profile/Snowy.png" alt="profile-image" width="50px" height="50px">
             <form action="/explore/create">
-            <button>Create post</button>
+                <button>Create post</button>
             </form>
         </div>
-    <% for (let i = 0; i < posts.length; i++) { %>
-    <div class="posts">
-        <div class="content">
-            <p id="time"><%= posts[i].createdAt %> </p>
-            <p style="color: #959595;"><%= posts[i].author %> </p>
-            <h2><%= posts[i].title %></h2>
-            <p><%= posts[i].text %></p>
+        <% for (let i = 0; i < posts.length; i++) { %>
+        <div class="posts">
+            <div class="content">
+                <p id="time"><%= posts[i].createdAt %> </p>
+                <p class="author"><%= posts[i].author %> </p>
+                <h2><%= posts[i].title %></h2>
+                <p><%= posts[i].text %></p>
+            </div>
+            <% if (posts[i].image) { %>
+            <img src="<%= posts[i].image %>" alt="image" width="100%">
+            <% } %>
+            <div class="content">
+                
+                <div class="action">
+                    <!-- <a href="#" class="action-hyperlink">
+                        <div class="action">
+                            <img src="svg/heart.svg" alt="heart for like or give karma">
+                            <p>Give Karma</p>
+                        </div>
+                    </a> -->
+                    <a href="/explore/<%= posts[i]._id %>">
+                        <div class="action">
+                            <img src="svg/message-square.svg" alt="comment">
+                            <p>Comment</p>
+                        </div>
+                    </a>
+                </div>
+                <% for (let j = 0; j < posts[i].comments.length; j++) { %>
+                <div class="comments">
+                    <p class="author"><%= posts[i].comments[j].author %></p>
+                    <p><%= posts[i].comments[j].text %></p>
+                </div>
+                <% } %>
+            </div>
         </div>
-        <% if (posts[i].image) { %>
-        <img src="<%= posts[i].image %>" alt="image" width="100%">
         <% } %>
-    </div>
-    <% } %>
     </div>
 
     <%- include("./partials/footer.ejs") %>

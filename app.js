@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express');
 const session = require('express-session')
+const methodOverride = require('method-override')
 const mongoose = require('mongoose');
 const chalk = require('chalk');
 const userRoute = require('./routes/userRoute');
@@ -21,7 +22,8 @@ app.set('view engine', 'ejs');
 // middleware & static files
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-app.use(session({ secret: process.env.SECRET }))
+app.use(methodOverride('_method'));
+app.use(session({ secret: process.env.SECRET, resave: false, saveUninitialized: false }));
 
 // about
 app.get('/about', (req, res) => {

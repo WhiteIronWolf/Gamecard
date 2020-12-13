@@ -15,4 +15,7 @@ router.get('/', requireLogin, exploreController.get_explore);
 router.post('/', requireLogin, exploreController.post_create);
 router.get('/create', requireLogin, exploreController.get_create);
 
+router.get('/:id', requireLogin, exploreController.get_comment);
+router.patch('/:id', requireLogin, exploreController.patch_comment);
+
 module.exports = router;

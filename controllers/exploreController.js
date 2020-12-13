@@ -14,8 +14,22 @@ const post_create = (req, res) => {
     use.new_post(req, res);
 }
 
+const get_comment = (req, res) => {
+    const { id } = req.params;
+    res.render('comment', {
+        title: 'Comment',
+        id: id
+    })
+}
+
+const patch_comment = (req, res) => {
+    use.new_comment(req, res);
+}
+
 module.exports = {
     get_explore,
     get_create,
-    post_create
+    post_create,
+    get_comment,
+    patch_comment
 }

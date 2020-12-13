@@ -24,4 +24,23 @@ function new_post(req, res) {
   });
 }
 
-module.exports = { explore, new_post };
+function new_comment(req, res) {
+  const { id } = req.params;
+  User.findById(req.session.user_id, function (err, creatorsName) {
+    const comment = {
+      author: creatorsName.name,
+      text: req.body.text
+    };
+    Post.updateOne({_id: id}, { $push: {comments: comment} })
+    .then(() => {
+      res.redirect('/explore')
+    })
+    .catch(() => {
+      console.log('promise rejected');
+      res.redirect('/explore/:id')
+    })
+
+  });
+}
+
+module.exports = { explore, new_post, new_comment };

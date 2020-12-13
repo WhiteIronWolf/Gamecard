@@ -28,14 +28,10 @@
 
     <div class="flexform">
         <div class="form">
-            <h1>Create a post:</h1>
-            <form action="/explore" method="post">
-                <label for="title">Title:</label>
-                <input id="title" type="text" name="title" required>
+            <h1>Create a comment:</h1>
+            <form action="/explore/<%= id %>?_method=PATCH" method="post">
                 <label for="text">Content:</label>
                 <textarea id="text" name="text" cols="30" rows="10"></textarea>
-                <label for="image">Image Url:</label>
-                <input id="image" type="url" name="image">
                 <input type="submit" value="Create">
             </form>
         </div>

@@ -17,6 +17,10 @@ const postSchema = new Schema({
     image: {
         type: String,
     },
+    likes: {
+        type: String,
+    },
+    comments: [{author: String, text: String}],
 }, {
     timestamps: true
 });

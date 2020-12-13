@@ -18,6 +18,30 @@
     padding: 0px 50px 0px 50px;
 }
 
+.content #likes {
+    color: #FF00CE;
+}
+
+.content .action {
+    display: flex;
+}
+
+.content .action p {
+    margin-left: 15px;
+    color: white;
+}
+
+.content .action .action-hyperlink {
+    margin-right: 50px;
+}
+
+.content .comments {
+    margin-top: 15px;
+    background-color: #0B0B0B;
+    border-radius: 15px;
+    padding: 25px;
+}
+
 #time {
     color: #FF00CE;
 }
@@ -52,10 +76,10 @@
 #create {
     display: flex;
     margin: 25px 0px 25px 0px;
-    width: 550px; 
+    width: 550px;
 }
 
-#create button{
+#create button {
     display: block;
     width: 100%;
     background-color: #121212;
@@ -72,6 +96,10 @@
     width: 100%;
 }
 
-#create button:hover{
+#create button:hover {
     cursor: pointer;
+}
+
+.author {
+    color: #959595
 }

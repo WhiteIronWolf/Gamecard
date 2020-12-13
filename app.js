@@ -1,7 +1,10 @@
+require('dotenv').config()
 const express = require('express');
+const session = require('express-session')
 const mongoose = require('mongoose');
-const routes = require('./routes/routes');
 const chalk = require('chalk');
+const userRoute = require('./routes/userRoute');
+const exploreRoute = require('./routes/exploreRoute');
 
 // express app
 const app = express();
@@ -18,6 +21,7 @@ app.set('view engine', 'ejs');
 // middleware & static files
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(session({ secret: process.env.SECRET }))
 
 // about
 app.get('/about', (req, res) => {
@@ -25,7 +29,8 @@ app.get('/about', (req, res) => {
 });
 
 // routes
-app.use('/', routes);
+app.use('/', userRoute);
+app.use('/explore', exploreRoute);
 
 // 404 page
 app.use((req, res) => {

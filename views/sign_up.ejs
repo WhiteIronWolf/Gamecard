@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %> </title>
     <link rel="stylesheet" href="../css/form.css">
 </head>
+
 <body>
 
     <nav>
@@ -24,15 +26,16 @@
             <h1>Create account:</h1>
             <form action="/sign_up" method="post">
                 <label for="name">Name:</label>
-                <input type="text" name="name" required>
+                <input id="name" type="text" name="name" required>
                 <label for="username">E-mail:</label>
-                <input type="email" name="username" required>
+                <input id="username" type="email" name="username" required>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
+                <input id="password" type="password" id="password" name="password">
                 <input type="submit" value="Create">
             </form>
         </div>
     </div>
 
 </body>
+
 </html>

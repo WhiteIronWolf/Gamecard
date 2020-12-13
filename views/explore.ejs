@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %> </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <nav>
@@ -16,14 +18,10 @@
         </div>
         <div id="path">
             <a class="current" href="/explore">Explore</a>
-            <a href="/create">Create</a>
+            <a href="#">Profile</a>
             <a href="#">Search</a>
         </div>
     </nav>
-
-    <div>
-        <h1>Explore:</h1>
-    </div>
 
     <div class="sidenav">
         <h3>Games</h3>
@@ -35,16 +33,34 @@
         <a href="#services">New to the industry</a>
         <h3>Leaderboard</h3>
         <a href="#contact">Highest karma</a>
-      </div>
-    
-    <% for (let i = 0; i < posts.length; i++) { %> 
+        <form class="button" action="/logout" method="POST">
+            <button class="logout">Sign out</button>
+        </form>
+    </div>
+
+    <div class="flex_posts">
+        <div id="create">
+            <img src="/img/profile/Snowy.png" alt="profile-image" width="50px" height="50px">
+            <form action="/explore/create">
+            <button>Create post</button>
+            </form>
+        </div>
+    <% for (let i = 0; i < posts.length; i++) { %>
     <div class="posts">
-        <p id="time"><%= posts[i].createdAt %> </p>
-        <h2><%= posts[i].title %></h2>
-        <p><%= posts[i].text %></p>
+        <div class="content">
+            <p id="time"><%= posts[i].createdAt %> </p>
+            <p style="color: #959595;"><%= posts[i].author %> </p>
+            <h2><%= posts[i].title %></h2>
+            <p><%= posts[i].text %></p>
+        </div>
+        <% if (posts[i].image) { %>
+        <img src="<%= posts[i].image %>" alt="image" width="100%">
+        <% } %>
     </div>
     <% } %>
+    </div>
 
     <%- include("./partials/footer.ejs") %>
 </body>
+
 </html>

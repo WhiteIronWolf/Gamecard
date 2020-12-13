@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const postSchema = new mongoose.Schema({
+const postSchema = new Schema({
+    author: {
+        type: String,
+        required: true,
+    },
     title: {
         type: String,
         required: true,
@@ -8,6 +13,9 @@ const postSchema = new mongoose.Schema({
     text: {
         type: String,
         required: true,
+    },
+    image: {
+        type: String,
     },
 }, {
     timestamps: true

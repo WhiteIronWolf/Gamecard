@@ -1,37 +1,27 @@
 const Post = require('../../models/posts');
+const User = require('../../models/user');
 
-function find_post(req, res) {
-    Post.find((err, posts) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.render('explore', {
-                posts: posts,
-                title: 'Explore'
-            });
-        }
-    }).sort({
-        createdAt: -1
-    })
+function explore(req, res) {
+  Post.find().sort({ createdAt: -1 })
+  .then(result => {
+    res.render('explore', { posts: result, title: 'Explore' });
+  })
+  .catch(err => {
+    console.log(err);
+  });
 }
 
-/*
-const create_post = (req, res) => {
-    res.render('create', {
-        title: 'Create'
-    })
-}
-
-const new_post = (req, res) => {
+function new_post(req, res) {
+  User.findById(req.session.user_id, function (err, creatorsName) {
     const post = new Post({
-        title: req.body.title,
-        text: req.body.text,
+      author: creatorsName.name,
+      title: req.body.title,
+      text: req.body.text,
+      image: req.body.image
     });
     post.save();
     res.redirect('/explore')
+  });
 }
-*/
 
-module.exports = {
-    find_post
-}
+module.exports = { explore, new_post };

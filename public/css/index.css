@@ -1,15 +1,12 @@
 @import url("master.css");
 
 body {
-    background: linear-gradient(to left, black 0%,black 50%,#000000 50%,#151515 50%,#151515 100%);
-}
-
-h1 {
-    margin: 25px 0px 25px 0px;
+    background: linear-gradient(to left, black 0%, black 50%, #000000 50%, #151515 50%, #151515 100%);
 }
 
 nav {
     justify-content: space-between;
+    background-color: transparent;
 }
 
 #flex {

@@ -18,8 +18,8 @@
         </div>
         <div id="path">
             <a class="current" href="/explore">Explore</a>
-            <a href="#">Profile</a>
-            <a href="#">Search</a>
+            <a href="/profile/<%= id %>">Profile</a>
+            <a href="/search">Search</a>
         </div>
     </nav>
 
@@ -83,7 +83,7 @@
         <% } %>
     </div>
 
-    <%- include("./partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>

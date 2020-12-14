@@ -1,0 +1,66 @@
+@import url("master.css");
+
+* {
+    scroll-behavior: smooth !important;
+}
+
+html,body {
+    height: 100%;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+#site-title {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;
+    margin: 25px 0px 25px 0px;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 400px;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.internal_links a {
+    margin-right: 50px;
+    color: white;
+}
+
+.internal_links a:hover {
+    color: #FF00CE;;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90%;
+    margin-top: 100px;
+}

@@ -1,0 +1,59 @@
+@import url("master.css");
+
+body {
+    padding: 0;
+}
+
+.content {
+    padding: 0px 200px 0px 200px;
+}
+
+nav {
+    padding: 0px 200px 0px 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+}
+
+img {
+    object-fit: cover;
+    height: 250px;
+    border-radius: 5px;
+}
+
+span {
+    color: #959595;
+}
+
+.flex {
+    margin-top: 18vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.flex div {
+    margin-right: 25px;
+}
+
+.flex_second {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blur {
+    text-shadow: 2px 2px 8px #000;
+}
+
+
+button {
+    font-size: 16px;
+    width: 175px;
+    margin: 25px 25px 0px 0px;
+    padding: 10px 0px 10px 0px;
+    background-color: #0B0B0B;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+

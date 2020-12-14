@@ -1,0 +1,50 @@
+@import url("master.css");
+
+button {
+    width: 175px;
+    background-color: #D800BF;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    padding: 10px 0px 10px 0px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+}
+
+.data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.data div {
+    text-align: center;
+    width: 250px;
+    background-color: #121212;
+    border-radius: 15px;
+}
+
+.data img {
+    object-fit: cover;
+    width: 250px;
+    height: 150px;
+  
+}
+.data h2 {
+    padding: 25px;
+    margin: 0px;
+}
+.data h2 {
+    font-size: 18px;
+}
+
+.data button {
+    margin: 25px;
+    background-color: #0B0B0B;
+    border-radius: 5px;
+}
+
+
+

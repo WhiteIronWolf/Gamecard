@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body id="playing">
+
+    <nav>
+        <div id="site-title">
+            <a href="/explore">
+                <h1>Gamecard</h1>
+            </a>
+            <div id="path">
+                <a href="/explore">Explore</a>
+                <a class="current" href="/profile/<%= id %>">Profile</a>
+                <a href="/search">Search</a>
+            </div>
+        </div>
+        <form class="button" action="/logout" method="POST">
+            <button class="logout">Sign out</button>
+        </form>
+    </nav>
+
+    <div class="flex-box">
+        <div>
+            <h1>Hello Player</h1>
+            <div class="internal_links">
+                <a href="#playing">Playing</a>
+                <a href="#played">Played</a>
+                <a href="#want">Want</a>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="../img/profile/Snowy.png" alt="Player_profile" width="150px">
+            <h2><%= user %></h2>
+        </div>
+    </div>
+
+    <section id="played">
+        <h3>Played</h3>
+        <div class="internal_links">
+            <a href="#playing">Playing</a>
+            <a href="#played">Played</a>
+            <a href="#want">Want</a>
+        </div>
+    </section>
+
+    <section id="want">
+        <h3>Want</h3>
+        <div class="internal_links">
+            <a href="#playing">Playing</a>
+            <a href="#played">Played</a>
+            <a href="#want">Want</a>
+        </div>
+    </section>
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="../css/game.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .tiledBackground {
+            background-image: url('<%= data.background_image_additional %>');
+            background-size: cover;
+            width: 100%;
+            height: 50vh;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div id="site-title">
+            <a href="/explore">
+                <h1>Gamecard</h1>
+            </a>
+        </div>
+        <div id="path">
+            <a href="/explore">Explore</a>
+            <a href="/profile/<%= user %>">Profile</a>
+            <a class="current" href="/search">Search</a>
+        </div>
+    </nav>
+
+    <div class="content">
+
+
+        <div class="tiledBackground">
+        </div>
+
+        <div class="flex">
+            <div>
+                <img src="<%= data.background_image %>" alt="">
+                <p><span>Developer: </span><%= data.developers[0].name %></p>
+            </div>
+
+            <div class="blur">
+                <p><%= data.released %></p>
+                <h2><%= data.name %></h2>
+                <p>Critics score: <%= data.metacritic %></p>
+            </div>
+        </div>
+
+        <div class="flex_second">
+            <div>
+                <button>Want</button>
+                <button>Played</button>
+                <button>Playing</button>
+            </div>
+
+            <div>
+                <a href="<%= data.website %>"><button>Visit website</button></a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

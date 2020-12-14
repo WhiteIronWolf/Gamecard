@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> </title>
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <nav>
+        <div id="site-title">
+            <a href="/explore">
+                <h1>Gamecard</h1>
+            </a>
+        </div>
+        <div id="path">
+            <a href="/explore">Explore</a>
+            <a href="/profile/<%= id %>">Profile</a>
+            <a class="current" href="/search">Search</a>
+        </div>
+    </nav>
+
+    <div class="flexform">
+        <div class="form">
+            <h1>Search</h1>
+            <p>What are you looking to find?</p>
+            <form id="searchForm">
+                <input id="search" type="text" name="query" required>
+                <button>Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="data">
+        
+    </div>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

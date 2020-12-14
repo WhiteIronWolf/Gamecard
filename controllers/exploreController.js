@@ -5,7 +5,7 @@ const get_explore = (req, res) => {
 }
 
 const get_create = (req, res) => {
-    res.render('create', {
+    res.render('explore/create', {
         title: 'Create'
     })
 }
@@ -16,7 +16,7 @@ const post_create = (req, res) => {
 
 const get_comment = (req, res) => {
     const { id } = req.params;
-    res.render('comment', {
+    res.render('explore/comment', {
         title: 'Comment',
         id: id
     })

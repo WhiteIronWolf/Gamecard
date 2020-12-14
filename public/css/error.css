@@ -1,0 +1,31 @@
+@import url("master.css");
+
+body {
+    /* image from pixabay */
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://cdn.pixabay.com/photo/2016/07/21/15/19/game-controller-1532747_1280.jpg');
+    background-size: cover;
+}
+
+nav {
+    background: transparent;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    color: #D800BF;
+}
+
+h1 {
+    margin: 0;
+    font-size: 100px;
+    font-family: 'Righteous', cursive;
+}
+
+p {
+    font-size: 64px;
+    margin: 25px 0px 50px;
+}

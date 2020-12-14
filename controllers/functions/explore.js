@@ -2,9 +2,10 @@ const Post = require('../../models/posts');
 const User = require('../../models/user');
 
 function explore(req, res) {
+  const id = req.session.user_id;
   Post.find().sort({ createdAt: -1 })
   .then(result => {
-    res.render('explore', { posts: result, title: 'Explore' });
+    res.render('explore/explore', { posts: result, title: 'Explore', id: id });
   })
   .catch(err => {
     console.log(err);

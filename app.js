@@ -4,8 +4,12 @@ const session = require('express-session')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose');
 const chalk = require('chalk');
+// routes
 const userRoute = require('./routes/userRoute');
 const exploreRoute = require('./routes/exploreRoute');
+const profileRoute = require('./routes/profileRoute');
+const searchRoute = require('./routes/searchRoute');
+
 
 // express app
 const app = express();
@@ -33,6 +37,8 @@ app.get('/about', (req, res) => {
 // routes
 app.use('/', userRoute);
 app.use('/explore', exploreRoute);
+app.use('/profile', profileRoute);
+app.use('/search', searchRoute);
 
 // 404 page
 app.use((req, res) => {

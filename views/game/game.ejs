@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Game</title>
+    <link rel="stylesheet" href="/css/edit.css">
+</head>
+
+<body>
+
+    <nav>
+        <div id="site-title">
+            <a href="/explore">
+                <h1>Gamecard</h1>
+            </a>
+            <div id="path">
+                <a class="current" href="/profile/<%= user %>">Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h3><%= name %></h3>
+        <div class="flex_box">
+            <a href="/profile/<%= user %>">Go back</a>
+            <form action="/game/<%= path %>/<%= id %>?_method=PATCH" method="post">
+                <button class="logout">Delete</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -56,10 +56,16 @@
         </div>
 
         <div class="flex_second">
-            <div>
-                <button>Want</button>
-                <button>Played</button>
-                <button>Playing</button>
+            <div class="flex_form">
+                <form action="/search/want/<%= id %>?_method=PATCH" method="post">
+                    <button>Want</button>
+                </form>
+                <form action="/search/played/<%= id %>?_method=PATCH" method="post">
+                    <button>Played</button>
+                </form>
+                <form action="/search/playing/<%= id %>?_method=PATCH" method="post">
+                    <button>Playing</button>
+                </form>
             </div>
 
             <div>

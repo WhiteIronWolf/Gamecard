@@ -64,3 +64,22 @@ section {
     min-height: 90%;
     margin-top: 100px;
 }
+
+.flex_game {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.flex_game p{
+    width: 200px;
+}
+
+.game {
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    margin: 0px 25px 0px 0px;
+}

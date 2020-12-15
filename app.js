@@ -9,6 +9,7 @@ const userRoute = require('./routes/userRoute');
 const exploreRoute = require('./routes/exploreRoute');
 const profileRoute = require('./routes/profileRoute');
 const searchRoute = require('./routes/searchRoute');
+const gameRoute = require('./routes/gameRoute');
 
 
 // express app
@@ -19,6 +20,8 @@ mongoose.connect('mongodb://localhost:27017/gamecard_db', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+
+mongoose.set('useFindAndModify', false);
 
 // register view engine
 app.set('view engine', 'ejs');
@@ -39,6 +42,7 @@ app.use('/', userRoute);
 app.use('/explore', exploreRoute);
 app.use('/profile', profileRoute);
 app.use('/search', searchRoute);
+app.use('/game', gameRoute);
 
 // 404 page
 app.use((req, res) => {

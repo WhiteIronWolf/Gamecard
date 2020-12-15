@@ -1,0 +1,33 @@
+@import url("master.css");
+
+html,body {
+    height: 100%;
+}
+
+#site-title {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    margin-left: 25px;
+}
+
+h3 {
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;
+    margin: 25px 0px 25px 0px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75%;
+}
+
+.flex_box {
+    display: flex;
+    align-items: center;
+}

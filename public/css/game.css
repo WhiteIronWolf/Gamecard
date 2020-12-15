@@ -40,6 +40,10 @@ span {
     justify-content: space-between;
 }
 
+.flex_form {
+    display: flex;
+}
+
 .blur {
     text-shadow: 2px 2px 8px #000;
 }

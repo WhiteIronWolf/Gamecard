@@ -28,12 +28,20 @@
 
     <div class="flex-box">
         <div>
-            <h1>Hello Player</h1>
+            <h1>Playing</h1>
             <div class="internal_links">
                 <a href="#playing">Playing</a>
                 <a href="#played">Played</a>
                 <a href="#want">Want</a>
             </div>
+            <div class="flex_game">
+                <% for (const game of playing) { %>
+                    <div>
+                        <div class="game" style="background-image: url('<%= game.image %>')" ;></div>
+                        <p><%= game.name %></p>
+                    </div>        
+                <% } %>
+                </div>
         </div>
         <div class="profile">
             <img src="../img/profile/Snowy.png" alt="Player_profile" width="150px">
@@ -48,6 +56,15 @@
             <a href="#played">Played</a>
             <a href="#want">Want</a>
         </div>
+        <div class="flex_game">
+            <% for (const game of played) { %>
+                <div>
+                    <div class="game" style="background-image: url('<%= game.image %>')" ;></div>
+                    <p><%= game.name %></p>
+                    <a href="/game/played/<%= game._id %>/<%= game.name %>">edit game</a>
+                </div>        
+            <% } %>
+            </div>
     </section>
 
     <section id="want">
@@ -56,6 +73,15 @@
             <a href="#playing">Playing</a>
             <a href="#played">Played</a>
             <a href="#want">Want</a>
+        </div>
+        <div class="flex_game">
+        <% for (const game of want) { %>
+            <div>
+                <div class="game" style="background-image: url('<%= game.image %>')" ;></div>
+                <p><%= game.name %></p>
+                <a href="/game/want/<%= game._id %>/<%= game.name %>">edit game</a>
+            </div>        
+        <% } %>
         </div>
     </section>
 

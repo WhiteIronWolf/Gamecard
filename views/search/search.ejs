@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../css/search.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
 
     <nav>
@@ -28,15 +30,19 @@
             <p>What are you looking to find?</p>
             <form id="searchForm">
                 <input id="search" type="text" name="query" required>
-                <button>Search</button>
+                <div class="provider">
+                    <button>Search</button>
+                    <p>Games provided by: <a href="https://rawg.io">RAWG</a></p>
+                </div>
             </form>
         </div>
     </div>
 
     <div class="data">
-        
+
     </div>
 
     <script src="js/search.js"></script>
 </body>
+
 </html>
